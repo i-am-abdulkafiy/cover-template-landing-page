@@ -1,0 +1,200 @@
+*, *::after, *::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui,-apple-system,
+	"Segoe UI",Roboto,"Helvetica Neue",
+	"Noto Sans","Liberation Sans",
+	Arial,sans-serif,"Apple Color Emoji",
+	"Segoe UI Emoji","Segoe UI Symbol",
+	"Noto Color Emoji";
+	border: none;
+	text-decoration: none;
+	list-style-type: none;
+}
+/*Settings*/
+:root {
+	--color-white: #fff;
+	--color-black: #000;
+	--color-light-dark: #898a8c;
+	--color-dark: #212529;
+}
+/*Background*/
+body {
+	min-height: 100vh;
+	background: var(--color-dark);
+}
+/*Utility Class*/
+.container {
+	max-width: 800px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+/*Container Reset Inside Navbar*/
+.navbar > .container {
+	height: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+/*Navbar*/
+.navbar {
+	width: 100%;
+	height: 4em;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+}
+/*Logo*/
+.brand {
+	color: var(--color-white);
+	font-size: 1.2rem;
+}
+.brand > h1 {
+	font-weight: 600;
+}
+/*Navbar_Menu*/
+.navbar__menu{
+	color: var(--color-white);
+	position: absolute;
+	display: none;
+	font-size: 1.6rem;
+	visibility: hidden;
+}
+/*Navbar_Nav*/
+.navbar__nav .mobile__nav {
+	display: flex;
+}
+/*Navbar_item*/
+.navbar__nav .nav__item	{
+	margin-left: 1rem;
+}
+/*Navbar_Link*/
+.nav__item .nav__link {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--color-light-dark);
+	transition: inherit;
+}
+/*Active*/
+.nav__item .active {
+	color: var(--color-white);
+}
+/*Hover*/
+.nav__item .nav__link:hover, .active {
+	color: var(--color-white);
+	border-bottom: solid 3px;
+}
+/*Hero Section*/
+.hero__section {
+	width: 100%;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background: url('../img/hero-image.jpg');
+	background-color: var(--color-dark);
+	position: absolute;
+	object-fit: cover;
+	background-repeat: no-repeat;
+	background-position: center left;
+	top: 0;
+	left: 0;
+}
+/*Hero Content*/
+.hero__content {
+	margin: 0 auto;
+	text-align: center;
+}
+/*Hero Title*/
+.hero__title {
+	color: var(--color-white);
+	font-size: 2.5rem;
+	font-weight: 600;
+	padding-bottom: 0.6rem;
+}
+/*Hero Paragraph*/
+.hero__paragraph {
+	font-weight: 100;
+	font-size: 1.2rem;
+	width: 75%;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+	color: var(--color-white);
+}
+/*Hero Btn*/
+.hero__btn {
+	padding: 0.7rem 1.25rem;
+	border-radius: 6px;
+	background: var(--color-white);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--color-dark);
+}
+/*Footer Section*/
+.footer {
+	margin: 0 auto;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	padding: 1.2rem 0;
+}
+/*Footer Paragraph*/
+.footer p {
+	font-size: 1rem;
+	color: var(--color-light-dark);
+}
+.footer p a {
+	color: var(--color-white);
+	text-decoration: underline;
+}
+/*Responsiveness*/
+@media screen and (max-width: 768px){
+	.navbar__nav {
+		right: 0;
+		top: 0;
+		width: 0;
+		min-height: 100vh;
+		position: absolute;
+		background: var(--color-dark);
+		display: flex;
+		flex-direction: column;
+		transition: 280ms ease;
+	}
+	.show {
+		width: 60%;
+	}
+	.mobile__nav {
+		margin-top: 100px;
+		display: block!important;
+	}
+	.navbar__menu {
+		display: flex;
+		z-index: 1;
+		right: 0;
+		visibility: initial;
+		cursor: pointer;
+		margin-right: 25px;
+	}/*
+	.navbar__close {
+		display: none;
+		z-index: 1;
+		right: 0;
+		cursor: pointer;
+		margin-right: 25px;
+	}*/
+	.nav__item {
+		margin-bottom: 1rem;
+		margin-left: unset!important;
+		padding-left: 2rem!important;
+	}
+	.nav__link {
+		font-size: 1.4rem!important;
+	}
+	.hero__paragraph {
+		width: 90%;
+	}
+}
