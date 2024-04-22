@@ -1,0 +1,1 @@
+# cover-template-landing-page
