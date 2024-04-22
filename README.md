@@ -20,13 +20,9 @@ Welcome to our project! This repository contains all the necessary files and doc
 
 To customize the landing page:
 
-1. Open `styles.css` in a text editor.
+1. Open `cover.css` in a text editor.
 2. Modify the CSS properties to fit your brand.
 3. Save the changes and refresh `cover.html` in your browser to see the updates.
-
-## Contributing
-
-We welcome contributions! Please see the `CONTRIBUTING.md` file for guidelines on how to contribute to this project.
 
 ## Contact
 
